@@ -1,0 +1,12 @@
+// Assigns priority of css rules
+@layer settings, tools, generic, elements, objects, typography, components, overrides;
+
+// Importing in for compilation. Ensured they are processed in the correct order
+@import 'settings';
+@import 'tools';
+@import 'generic';
+@import 'elements';
+@import 'objects';
+@import 'typography';
+@import 'components';
+@import 'overrides';

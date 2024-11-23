@@ -1,0 +1,21 @@
+@import 'settings';
+
+@layer generic {
+  html {
+    font-size: 100%;
+    box-sizing: border-box; // total width includes padding
+    
+  }
+
+  *, *::before, ::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-inter);
+  }
+
+}
+

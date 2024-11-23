@@ -1,0 +1,15 @@
+@typography {
+  :root {
+   h1, 
+   h2, 
+   h3 {
+    margin-top: 0; // browser default has margin on top and bottom
+   }
+
+   a,
+   a:visited,
+   a:active {
+    text-decoration: none; // No underline
+   }
+  }
+}
