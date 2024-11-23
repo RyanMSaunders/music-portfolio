@@ -1,12 +1,4 @@
-// Assigns priority of css rules
-@layer settings, tools, generic, elements, objects, typography, components, overrides;
 
-// Importing in for compilation. Ensured they are processed in the correct order
-@import 'settings';
-@import 'tools';
-@import 'generic';
-@import 'elements';
-@import 'objects';
-@import 'typography';
-@import 'components';
-@import 'overrides';
+
+@forward 'tools'; // makes all the public members (e.g., functions, variables, mixins) of the tools module available directly
+@forward 'typography';

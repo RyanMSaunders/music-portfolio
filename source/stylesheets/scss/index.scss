@@ -1,0 +1,22 @@
+
+// useing in for compilation. Ensured they are processed in the correct order
+// @use 'settings';
+// @use 'tools';
+// @use 'generic';
+// @use 'elements';
+// @use 'objects';
+// @use 'typography';
+// @use 'components';
+// @use 'overrides';
+
+@use 'settings' as *;
+@use 'tools' as *;
+@use 'generic' as *;
+@use 'elements' as *;
+@use 'objects' as *;
+@use 'typography'as *;
+@use 'components' as *;
+@use 'overrides' as *;
+
+// Assigns priority of css rules
+@layer settings, tools, generic, elements, objects, typography, components, overrides;

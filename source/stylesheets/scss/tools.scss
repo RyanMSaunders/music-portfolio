@@ -1,3 +1,5 @@
+@use 'sass:math'; // Importing math module
+
 // 640px, 1150px, 1400px
 $breakpoints-up: (
 	'medium': '40em',
@@ -45,11 +47,13 @@ h1 {
 
 */
 
-@use "sass:math";
+
 // Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
 // converts pixels to rem. 16px = 1rem
 @function rem($pixels, $context: 16) {
-  @return (math.div($pixels, $context)) * 1rem;
+  // @return (math.div($pixels, $context)) * 1rem;
+	@return $pixels / $context * 1rem;
+
 }
 
 /**
