@@ -9,6 +9,7 @@ const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
+const concat = require('gulp-concat');
 
 // Use dart-sass for @use
 sass.compiler = require('dart-sass');
@@ -39,8 +40,9 @@ async function scssTask(done) {
 
 // JavaScript Task
 function jsTask() {
-  return src('source/javascripts/script.js', { sourcemaps: true })
+  return src('source/**/*.js', { sourcemaps: true })
     .pipe(babel({ presets: ['@babel/preset-env'] })) // compiles ES6 to version older browser can support
+    .pipe(concat('script.js')) // Combine into script.js
     .pipe(terser()) // minify js
     .pipe(dest('build/javascripts', { sourcemaps: '.' })); // destination of compiled folder
 }

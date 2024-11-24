@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gulp-concat": "^2.6.1",
     "sass": "^1.81.0"
   },
   "dependencies": {

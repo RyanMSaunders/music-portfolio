@@ -1,1 +1,1 @@
-"use strict";console.log("Hello");//# sourceMappingURL=script.js.map
+"use strict";var toggleButton=document.getElementsByClassName("navbar__toggle-button")[0],navbarLinks=document.getElementsByClassName("navbar__links")[0];toggleButton.addEventListener("click",(function(){navbarLinks.classList.toggle("navbar__links--active")})),console.log("Hello");//# sourceMappingURL=script.js.map
