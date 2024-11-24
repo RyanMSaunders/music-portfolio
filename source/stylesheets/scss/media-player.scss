@@ -1,27 +1,78 @@
 @layer components {
   .player{
-    height: 95vh;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: auto;
+    // max-height: 5rem;
+    z-index: 50;
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
     justify-content: center;
 }
-  .wrapper{
+  .player__wrapper{
+    width: 100%;
+    // max-width: 100%;
+
     border: 1px solid transparent;
-    padding: 30px;
-    border-radius: 20px;
+    // padding: 30px;
+    border-radius: 10px;
     background-color: #ddd;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // flex-direction: row;
+    // box-sizing: border-box; /* Include padding and border in width calculation */
+    // justify-content: flex-start;
+
+  }
+
+  .player__layout {
+    // display: flex;
+    // // align-items: center;
+    width: 100%;
+    // box-sizing: border-box; /* Include padding/borders in width calculation */
+    // margin: 0; /* Remove any default margins */
+    // padding: 0; /* Remove any default padding */
+    // flex: 1; /* Let it stretch fully within the wrapper */
+    // flex: 1 1 auto;
+    // justify-content: space-between; /* Distribute content evenly */
+    // align-items: center; /* Center items vertically */
+
+
+  }
+
+  .player_inner-container {
+    // display: flex;
+    // flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
   
-  .details {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  .player__details {
+  // display: flex;
+  // align-items: flex-start;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // // flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .player__info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
   }
   
-  .track-art {
+  .player__track-art {
   margin: 25px;
   height: 250px;
   width: 250px;
@@ -37,65 +88,64 @@
   border-radius:190px;
   }
   
-  .now-playing {
-  font-size: 1rem;
+
+  .player__track-name {
+  font-size: 1.5rem;
   }
   
-  .track-name {
-  font-size: 2.5rem;
-  }
-  
-  .track-artist {
+  .player__track-artist {
   margin-top: 5px;
   font-size: 1.5rem;
   }
   
-  .buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 30px;
+  .player__buttons {
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // margin-bottom: 30px;
+    flex-shrink: 0;
+    margin-right: 20px;
   }
   .active{
       color: black;
   }
   
-  .repeat-track,
-  .random-track,
-  .playpause-track,
-  .prev-track,
-  .next-track {
+  
+  .playpause-track {
   padding: 25px;
   opacity: 0.8;
   transition: opacity .2s;
   }
   
-  .repeat-track:hover,
-  .random-track:hover,
-  .playpause-track:hover,
-  .prev-track:hover,
-  .next-track:hover {
+  .playpause-track:hover {
   opacity: 1.0;
   }
   
-  .slider_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .player__slider_container {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+    width: 100%;
+    
+    
   }
   
-  .seek_slider, .volume_slider {
+  .player__seek_slider, .player__volume_slider {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 100% !important;
   height: 5px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
   background: #83A9FF;
   -webkit-transition: .2s;
   transition: opacity .2s;
   }
   
-  .seek_slider::-webkit-slider-thumb,
-  .volume_slider::-webkit-slider-thumb {
+  .player__seek_slider::-webkit-slider-thumb,
+  .player__volume_slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -107,22 +157,22 @@
   border-radius: 100%;
   }
   
-  .seek_slider:hover,
-  .volume_slider:hover {
+  .player__seek_slider:hover,
+  .player__volume_slider:hover {
   opacity: 1.0;
   }
   
-  .seek_slider {
+  .player__seek_slider {
   width: 60%;
   }
   
-  .volume_slider {
+  .player__volume_slider {
   width: 30%;
   }
   
-  .current-time,
-  .total-duration {
-  padding: 10px;
+  .player__current-time{
+  // padding: 10px;
+  font-size: 1rem;
   }
   
   i.fa-volume-down,
