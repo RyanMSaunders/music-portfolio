@@ -14,30 +14,117 @@
    />
 
    <link rel="stylesheet" href="./stylesheets/css/index.css">
-   <script defer src="./javascripts/script.js"></script>
 
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar__title">Ryan Maguire</div>
-    <a href="#" class="navbar__toggle-button">
-      <span class="navbar__toggle-button-bar"></span>
-      <span class="navbar__toggle-button-bar"></span>
-      <span class="navbar__toggle-button-bar"></span>
+  <header>
+    <nav class="navbar">
+      <div class="navbar__title">Ryan Maguire</div>
+      <a href="#" class="navbar__toggle-button">
+        <span class="navbar__toggle-button-bar"></span>
+        <span class="navbar__toggle-button-bar"></span>
+        <span class="navbar__toggle-button-bar"></span>
 
-    </a>
-    <div class="navbar__links">
-      <ul class="navbar__links-list">
-        <li class="navbar__links-item"> <a href="#" class="navbar__link">Home</a></li>
-        <li class="navbar__links-item"> <a href="#" class="navbar__link">Music</a></li>
-        <li class="navbar__links-item"> <a href="#" class="navbar__link">Video</a></li>
-        <li class="navbar__links-item"> <a href="#" class="navbar__link">Press</a></li>
-        <li class="navbar__links-item">  <a href="#" class="navbar__link">Contact</a></li>
-      </ul>
+      </a>
+      <div class="navbar__links">
+        <ul class="navbar__links-list">
+          <li class="navbar__links-item"> <a href="#" class="navbar__link">Home</a></li>
+          <li class="navbar__links-item"> <a href="#" class="navbar__link">Music</a></li>
+          <li class="navbar__links-item"> <a href="#" class="navbar__link">Video</a></li>
+          <li class="navbar__links-item"> <a href="#" class="navbar__link">Press</a></li>
+          <li class="navbar__links-item">  <a href="#" class="navbar__link">Contact</a></li>
+          <li class="navbar__links-item ">
+          <button id="navbar__dark-mode-toggle" class="navbar__dark-mode-toggle" aria-label="toggle dark mode">
+            <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+              <path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/>
+            </svg>
+          </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <section>
+      <h1>Home</h1>
+    </section>
+    
+    <section>
+      <h1>Music</h1>
+    </section>
+
+    <section>
+      <h1>Video</h1>   
+    </section>
+
+    <section>
+      <h1>Press</h1>
+    </section>
+  </main>
+
+  <footer>
+    <section>
+      <h1>Contact</h1>
+    </section>
+    
+    <section>
+      <div class="player">
+        <div class="wrapper">
+            <div class="details">
+                <div class="track-name">Track Name</div>
+            </div>
+
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+            </div>
+
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <div class="buttons">
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
+  </section>
+
+    <!-- <section>
+      <div class="player">
+        <div class="wrapper">
+            <div class="details">
+                <div class="track-name">Track Name</div>
+            </div>
+
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+            </div>
+
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <div class="buttons">
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section> -->
+</footer>
 
   
-  
+  <script defer src="./javascripts/script.js"></script>
 </body>
 </html>
