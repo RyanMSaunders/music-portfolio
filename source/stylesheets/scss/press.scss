@@ -1,7 +1,16 @@
 
 @layer components {
+
+  .press {
+    margin-bottom: 6rem;
+  }
   .press_link {
     color: var(--foreground);
     text-decoration: underline;
+  }
+
+  .press__section-title {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
   }
 }

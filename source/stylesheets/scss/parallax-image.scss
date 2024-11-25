@@ -1,3 +1,4 @@
+@use 'tools' as *;
 
 @layer components {
   .parallax {
@@ -7,6 +8,8 @@
     min-height: 75vh;
     display: grid;
     grid-template-areas: "stack";
+
+
   }
   
   .parallax > * {
@@ -28,10 +31,29 @@
   .parallax__bg {
     --parallax-speed: -10;
 
+    // position: absolute; /* Position it relative to `.parallax` */
+    // top: 0;
+    // left: 0;
+    // width: 100vw; /* Full width of the viewport */
+    // height: 100vh; /* Full height of the viewport */
+    // object-fit: cover; /* Ensure it covers the entire area without distortion */
+
     z-index: 1;
     min-height: 100%;
     width: 100%;
     object-fit: cover;
+
+    // @include breakpoint-down('small') {
+    //   width: 100%;
+    //   height: auto; /* Allows the height to adjust proportionally */
+    //   min-height: 100vh; /* Ensures it still covers the viewport */
+
+    //   max-height: 100vh;
+    //   min-height: unset; /* Removes fixed min-height on small screens */
+    //   object-position: center; /* Centers the image if cropping occurs */
+      
+    // }
+    
   }
 
   .parallax__stars {
@@ -40,19 +62,47 @@
   }
 
   .parallax__logo {
-    --parallax-speed: 5;
+    --parallax-speed: 15;
     z-index: 4;
+    position: absolute; //// use position absolute to adjust
+    top: 30%; /* 50% from the top of the viewport */
+    transform: translateY(-50%); /* Offsets the element by half its width and height to truly center it */
+    
+
+    height: 80rem; /* Set a width */
+    width: auto; /* Maintain the aspect ratio */
+    // max-width: 100%;
+    object-fit: contain; /* Ensure the image is not stretched */
+
+   
   }
   
   .parallax__space-baby {
-    --parallax-speed: 10;
+    --parallax-speed: 25;
     z-index: 5;
     position: absolute; //// use position absolute to adjust
-    top: 100px;
+    top: 5%;
+    left: 35%;
+    transform: translateY(-25%); /* Offsets the element by half its width and height to truly center it */
 
-    height: 375px; /* Set a width */
+    height: 25%;
     width: auto; /* Maintain the aspect ratio */
     object-fit: contain; /* Ensure the image is not stretched */
+    max-width: 50%;
+
+    @include breakpoint-down('medium') {
+      height: 20%;      
+      max-width: 15rem;
+      top: 10%;
+      left: 45%;
+    }
+  
+    @include breakpoint-down('small') {
+      height: 20%;      
+      max-width: 12rem;
+      top: 10%;
+      left: 38%;
+    }
     
   }
 
