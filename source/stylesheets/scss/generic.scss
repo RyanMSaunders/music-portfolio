@@ -19,5 +19,92 @@
     color: var(--foreground);
   }
 
+  .wrapper {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  section {
+    padding-block: 5rem;
+  }
+
+  .diagonal {
+    --skew-angle: -5deg;
+    --background: linear-gradient(
+      45deg, #12c2e9, #c471ed, #f64f59
+    );
+
+    position: relative;
+    isolation: isolate;
+  }
+
+  .diagonal::after {
+    content: '';
+    background: var(--background);
+    position: absolute;
+    inset: 0; // shorthand for top bottom left and right
+    transform: skewY(var(--skew-angle));
+    z-index: -1;
+  }
+
+  .spikes {
+    --spike-color: var(--background);
+    --spike-width: 50px;
+    --spike-height: 10px;
+    position: relative;
+    background: linear-gradient(
+      to right, #fdc830, #f37335 
+    );
+  }
+
+  .spikes::before,
+  .spikes::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: var(--spike-height);
+    background: var(--background);
+    -webkit-mask-image: url('../../images/triangle.svg');
+    -webkit-mask-size: var(--spike-width) var(--spike-height);
+
+    mask-image: url('../../images/triangle.svg');
+    mask-size: var(--spike-width) var(--spike-height);
+  }
+
+  .spikes::before {
+    top: 0;
+  }
+
+  .spikes::after {
+    bottom: 0;
+    transform: rotate(.5turn);
+  }
+
+  .wavy {
+    background: linear-gradient(
+      to right,
+      #00f260,
+      #0575e6
+    );
+
+   
+    --mask:
+      radial-gradient(61.77px at 50% 84px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 51% repeat-x,
+      radial-gradient(61.77px at 50% -54px,#0000 99%,#000 101%) 50% 30px/120px calc(51% - 30px) repeat-x,
+      radial-gradient(61.77px at 50% calc(100% - 84px),#000 99%,#0000 101%) calc(50% - 60px) 100%/120px 51% repeat-x,
+      radial-gradient(61.77px at 50% calc(100% + 54px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px calc(51% - 30px) repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    
+  }  
+
+
+
 }
 

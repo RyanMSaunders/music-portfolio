@@ -9,11 +9,11 @@
 
 @layer settings {
   :root {
-    --clr-light: #fdffc4;
-    --clr-dark: #00332a;
-    --clr-primary: #dbffa2;
-    --clr-secondary: #c3fcf2;
-    --clr-accent: #ff7750;
+    --clr-light: #D2E1AA;
+    --clr-dark: #2C1529;
+    --clr-primary: #3D8ABE;
+    --clr-secondary: #402C51;
+    --clr-accent: #C37236;
 
     --foreground: var(--clr-dark);
     --background: var(--clr-light);
@@ -22,11 +22,11 @@
   }
 
   .darkmode {
-    --clr-light: #fdffc4;
-    --clr-dark: #00332a;
-    --clr-primary: #202302;
-    --clr-secondary: #00100d;
-    --clr-accent: #ff7750;
+    --clr-light: #D2E1AA;
+    --clr-dark: #2C1529;
+    --clr-primary: #3D8ABE;
+    --clr-secondary: #402C51;
+    --clr-accent: #C37236;
   
     --foreground: var(--clr-light);
     --background: var(--clr-dark);
