@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass source/stylesheets/scss/index.scss:build/stylesheets/css/styles.css",
-    "sass:watch": "sass --watch source/stylesheets/scss:build/stylesheets/css"
+    "sass:watch": "sass --watch source/stylesheets/scss:build/stylesheets/css",
+    "start": "npm run build && serve -s build",
+    "build": "sass source/stylesheets/scss:build/stylesheets/css"
+
+
   },
   "keywords": [],
   "author": "",
@@ -29,6 +33,7 @@
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
-    "postcss": "^8.4.49"
+    "postcss": "^8.4.49",
+    "serve": "^14.2.4"
   }
 }
