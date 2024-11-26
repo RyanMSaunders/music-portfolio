@@ -9,20 +9,30 @@
 
 @layer settings {
   :root {
-    // --clr-light: linear-gradient(
-    //   to right, #fdc830, #f37335 
-    // );
-    // --clr-light: linear-gradient(
-    //   to right, #FFDEE9, #d9fefd 
-    // );
     --clr-light: #FFDEE9;
     --clr-dark: #2C1529;
     --clr-primary: #3D8ABE;
     --clr-secondary: #402C51;
     --clr-accent: #C37236;
 
+    --clr-orange-gr: linear-gradient(
+      to right, #F7CE68, #FBAB7E 
+    );
+    --clr-green-gr: linear-gradient(
+      to right,
+      #74EBD5,
+      #9FACE6
+    );
+    --clr-purple-gr: linear-gradient(
+      to right, #A9C9FF, #FFBBEC
+    );
+
     --foreground: var(--clr-dark);
     --background: var(--clr-light);
+
+    --gradient-top: var(--clr-purple-gr);
+    --gradient-mid: var(--clr-orange-gr);
+    --gradient-bottom: var(--clr-green-gr);
 
     --font-inter: 'Inter', sans-serif;
   }
@@ -33,52 +43,25 @@
     --clr-primary: #3D8ABE;
     --clr-secondary: #402C51;
     --clr-accent: #C37236;
+
+    --clr-orange-gr: linear-gradient(
+      to right, #fdc830, #f37335 
+    );
+    --clr-green-gr: linear-gradient(
+      to right,
+      #00a241,
+      #0575e6
+    );
+    --clr-purple-gr: linear-gradient(
+      45deg, #6241d0, #C850C0, #C37236
+    );
   
     --foreground: var(--clr-light);
     --background: var(--clr-dark);
+
+    --gradient-top: var(--clr-purple-gr);
+    --gradient-mid: var(--clr-orange-gr);
+    --gradient-bottom: var(--clr-green-gr);
   }
 
 }
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background: var(--dark-bg);
-//     --text-color: var(--dark-text2);
-//     --text-color2: var(--dark-text1);
-//     --card-bg: var(--dark-card);
-//     --card-hover: var(--dark-card-hover);
-//     --toggle: var(--light-bg);
-//     --toggle-bg: linear-gradient(
-//       225deg,
-//       var(--toggle-bg-end) 0%,
-//       var(--toggle-bg-start) 98.02%
-//     );
-//     --toggle-button: var(--dark-bg);
-//   }
-// }
-
-// body.light {
-//   --background: var(--light-bg);
-//   --text-color: var(--light-text2);
-//   --text-color2: var(--light-text1);
-//   --card-bg: var(--light-card);
-//   --card-hover: var(--light-card-hover);
-//   --toggle: var(--toggle-light);
-//   --toggle-bg: var(--toggle-bg-light);
-//   --toggle-button: var(--toggle-button-light);
-// }
-
-// body.dark {
-//   --background: var(--dark-bg);
-//   --text-color: var(--dark-text2);
-//   --text-color2: var(--dark-text1);
-//   --card-bg: var(--dark-card);
-//   --card-hover: var(--dark-card-hover);
-//   --toggle: var(--light-bg);
-//   --toggle-bg: linear-gradient(
-//     225deg,
-//     var(--toggle-bg-end) 0%,
-//     var(--toggle-bg-start) 98.02%
-//   );
-//   --toggle-button: var(--dark-bg);
-// }

@@ -4,6 +4,7 @@
   html {
     font-size: 100%;
     box-sizing: border-box; // total width includes padding
+    scroll-behavior: smooth;
     
   }
 
@@ -36,17 +37,12 @@
 
   section {
     padding-block: 5rem;
+
   }
 
   .diagonal {
     --skew-angle: -5deg;
-    --background: linear-gradient(
-      45deg, #6241d0, #C850C0, #C37236
-    );
-
-    // 45deg, #12c2e9, #c471ed, #f64f59
-    // 45deg, #4158D0, #C850C0, #FFCC70 from grabient
-    // C37236 orange
+    --background: var(--gradient-top);
 
     position: relative;
     isolation: isolate;
@@ -68,25 +64,9 @@
     --spike-height: 12px;
     --svg-url: url('../../images/triangle.svg');
     position: relative;
-    background: linear-gradient(
-      to right, #fdc830, #f37335 
-    );
+    background: var(--gradient-mid);
   }
 
-  // ../../images/svg/triangle.svg
-  // ../../images/svg/funky-shape-3.svg
-  // ../../images/svg/funky-shape-two.svg
-  // ../../images/svg/funky-shape.svg
-  // ../../images/svg/isoceles-right.svg
-  // ../../images/svg/isoceles-left.svg
-  // ../../images/svg/short-triangle-left.svg
-  // ../../images/svg/short-triangle-right.svg
-  // ../../images/svg/tiny-isoceles-left.svg
-  // ../../images/svg/tiny-isoceles-right.svg
-  // ../../images/svg/tiny-triangle-left.svg
-  // ../../images/svg/tiny-triangle-right.svg
-  // ../../images/svg/triangle-left.svg
-  // ../../images/svg/triangle-right.svg
   
 
   .spikes::before,
@@ -123,11 +103,7 @@
   }
 
   .wavy {
-    background: linear-gradient(
-      to right,
-      #00a241,
-      #0575e6
-    );
+    background: var(--gradient-bottom);
 
     // #00f260,
 
