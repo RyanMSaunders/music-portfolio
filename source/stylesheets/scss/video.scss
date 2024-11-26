@@ -1,5 +1,14 @@
 
 @layer components {
+
+
+  .video__title-bg {
+    background-color: rgba(223, 126, 52, 0.65);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: .3rem;
+   
+  }
   .video__ytvideo {
     max-width: 100%;
     margin-bottom: 2rem;

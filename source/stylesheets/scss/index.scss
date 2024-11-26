@@ -1,13 +1,5 @@
 
-// useing in for compilation. Ensured they are processed in the correct order
-// @use 'settings';
-// @use 'tools';
-// @use 'generic';
-// @use 'elements';
-// @use 'objects';
-// @use 'typography';
-// @use 'components';
-// @use 'overrides';
+
 
 @use 'settings' as *;
 @use 'tools' as *;

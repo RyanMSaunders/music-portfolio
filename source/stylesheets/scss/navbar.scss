@@ -18,7 +18,7 @@
     margin: .5rem;
   }
 
-  .navbar__links { //////////
+  .navbar__links { 
     height: 100%;
   }
 
@@ -55,20 +55,19 @@
   }
 
   .navbar__toggle-button-bar {
-    height: 3px; ///////
+    height: 3px; 
     width: 100%;
     background-color: white;
     border-radius: 10px;
   }
 
-  // @include breakpoint-down()
 
   @media (max-width: 800px) {
     .navbar__toggle-button {
       display: flex;
     }
 
-    .navbar__links { //// breaks it, used to be .navbar__navbar-links
+    .navbar__links { 
       display: none;
       width: 100%;
     }

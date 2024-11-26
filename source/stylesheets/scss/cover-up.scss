@@ -1,0 +1,30 @@
+
+@layer components {
+  // Cover up Divs
+  .cover-up {
+    background: var(--background);
+    z-index: 3;
+    height: 7rem;
+    width: 100%;
+    margin-top: -100px;
+    margin-bottom: -50px;
+    
+  }
+
+  .cover-up__bottom {
+    padding-bottom: 200px;
+    margin-bottom: -200px;
+    
+  }
+
+  .cover-up__hero {
+    background: var(--clr-dark);
+    z-index: 3;
+    height: 7rem;
+    width: 100%;
+    margin-bottom: -160px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -150px;
+  }
+}

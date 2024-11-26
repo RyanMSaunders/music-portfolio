@@ -1,5 +1,4 @@
-// @forward 'tools'; // ensure that tools and typography are available to any file that imports settings.scss, without needing to directly import tools or typography
-// @forward 'typography';
+
 
 /* https://developer.helpscout.com/seed/glossary/itcss/#the-triangle */
 @layer settings, tools, generic, elements, objects, typography, components, overrides;

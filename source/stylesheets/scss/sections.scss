@@ -1,0 +1,79 @@
+
+@layer components {
+  /// Gradient & Shape styling on sections
+
+  .diagonal {
+    --skew-angle: -5deg;
+    --background: var(--gradient-top);
+
+    position: relative;
+    isolation: isolate;
+    height: 12rem;
+  }
+
+  .diagonal::after {
+    content: '';
+    background: var(--background);
+    position: absolute;
+    inset: 0; 
+    transform: skewY(var(--skew-angle));
+    z-index: -1;
+  }
+
+  .spikes {
+    --spike-color: var(--background);
+    --spike-width: 80px;
+    --spike-height: 12px;
+    --svg-url: url('../../images/triangle.svg');
+    position: relative;
+    background: var(--gradient-mid);
+  }
+
+  .spikes::before,
+  .spikes::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: var(--spike-height);
+    background: var(--background);
+    -webkit-mask-image: var(--svg-url);
+    -webkit-mask-size: var(--spike-width) var(--spike-height);
+
+    mask-image: var(--svg-url);
+    mask-size: var(--spike-width) var(--spike-height);
+  }
+
+  // top svg
+  .spikes::before {
+    top: 0;
+  }
+
+  // Bottom svg
+  .spikes::after {
+    --svg-url: url('../../images/triangle.svg');
+    --spike-width: 80px;
+    --spike-height: 12px;
+    bottom: 0;
+    transform: rotate(.5turn);
+  }
+
+  .wavy {
+    background: var(--gradient-bottom);
+ 
+    --mask:
+      radial-gradient(61.77px at 50% 84px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 51% repeat-x,
+      radial-gradient(61.77px at 50% -54px,#0000 99%,#000 101%) 50% 30px/120px calc(51% - 30px) repeat-x,
+      radial-gradient(61.77px at 50% calc(100% - 84px),#000 99%,#0000 101%) calc(50% - 60px) 100%/120px 51% repeat-x,
+      radial-gradient(61.77px at 50% calc(100% + 54px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px calc(51% - 30px) repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    
+  }
+  
+
+  /// Non-gradient section styling
+  .--background-normal {
+    background: var(--background);
+    z-index: 1;
+  }
+}
