@@ -1,0 +1,17 @@
+
+@layer components {
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .social-links a {
+    font-size: 30px;
+    color: var(--foreground);
+    text-decoration: none;
+  }
+  .social-links a:hover {
+    color: var(--clr-accent); 
+  }
+}

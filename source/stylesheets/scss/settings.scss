@@ -9,7 +9,13 @@
 
 @layer settings {
   :root {
-    --clr-light: #D2E1AA;
+    // --clr-light: linear-gradient(
+    //   to right, #fdc830, #f37335 
+    // );
+    // --clr-light: linear-gradient(
+    //   to right, #FFDEE9, #d9fefd 
+    // );
+    --clr-light: #FFDEE9;
     --clr-dark: #2C1529;
     --clr-primary: #3D8ABE;
     --clr-secondary: #402C51;

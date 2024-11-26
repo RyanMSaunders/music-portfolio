@@ -13,6 +13,7 @@
      rel="stylesheet"
    />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 
    <link rel="stylesheet" href="./stylesheets/css/index.css">
@@ -21,7 +22,7 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="navbar__title">Ryan Maguire</div>
+      <div class="navbar__title"></div>
       <a href="#" class="navbar__toggle-button">
         <span class="navbar__toggle-button-bar"></span>
         <span class="navbar__toggle-button-bar"></span>
@@ -31,10 +32,10 @@
       <div class="navbar__links">
         <ul class="navbar__links-list">
           <li class="navbar__links-item"> <a href="#" class="navbar__link">Home</a></li>
-          <li class="navbar__links-item"> <a href="#" class="navbar__link">Music</a></li>
-          <li class="navbar__links-item"> <a href="#" class="navbar__link">Video</a></li>
-          <li class="navbar__links-item"> <a href="#" class="navbar__link">Press</a></li>
-          <li class="navbar__links-item">  <a href="#" class="navbar__link">Contact</a></li>
+          <li class="navbar__links-item"> <a href="#music" class="navbar__link">Music</a></li>
+          <li class="navbar__links-item"> <a href="#video" class="navbar__link">Video</a></li>
+          <li class="navbar__links-item"> <a href="#press" class="navbar__link">Press</a></li>
+          <li class="navbar__links-item">  <a href="#contact" class="navbar__link">Contact</a></li>
           <li class="navbar__links-item ">
           <button id="navbar__dark-mode-toggle" class="navbar__dark-mode-toggle" aria-label="toggle dark mode">
             <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
@@ -59,22 +60,18 @@
     
     <!-- </section> -->
   </div>
+  <div class=" wrapper cover-up cover-up__hero"></div>
   <main class="main-content">
-    <section class="diagonal">
+    <section id="music" class="diagonal">
       <div class="wrapper">
-      <h1 class="section-title">Home</h1>
-      <!-- <div class="full-screen-video-container">
-        <video autoplay loop muted>
-          <source src="../video/SpaceBaby.mp4" type="video/mp4">
-        </video>
-        <div class="full-screen-video-content"> Ryan Maguire</div>
-      </div> -->
+      <h1 class="section-title">Music</h1>
       </div>
     </section>
+    <div class=" wrapper cover-up"></div>
 
-    <section>
+    <section class="background-normal digital-album">
       <div class="wrapper">
-      <h1 class="section-title">Digital Albums</h1>
+      <h1 class="section-title"></h1>
       <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=3818877164/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://ryanmaguire.bandcamp.com/album/flight-of-the-space-baby">Flight of the Space Baby by Ryan Maguire</a></iframe>      
       <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=375102592/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://ryanmaguire.bandcamp.com/album/pants-on-fire">Pants On Fire by Ryan Maguire</a></iframe>
       <iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=1970712033/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://smithandmaguire.bandcamp.com/album/there-you-go">There You Go by Smith &amp; Maguire</a></iframe>
@@ -82,16 +79,16 @@
    
     </section>
 
-    <section class="spikes">
+    <section id="video" class="spikes">
       <div class="wrapper">
-      <h1 class="section-title">Video</h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores soluta dolore, inventore quos repellendus repellat natus saepe, dicta eveniet cumque excepturi velit voluptatum qui quaerat in tempore eius iure molestiae?</p>
-      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/aEwUgv1KnYU?si=EZMiydqwWFPYU2li" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/O9DFeHQyZ34?si=zEn2ufJJVZD4Lflx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+      <h1 class="section-title spikes__title-bg">Video</h1>
+      <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores soluta dolore, inventore quos repellendus repellat natus saepe, dicta eveniet cumque excepturi velit voluptatum qui quaerat in tempore eius iure molestiae?</p> -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/aEwUgv1KnYU?si=EZMiydqwWFPYU2li" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/O9DFeHQyZ34?si=zEn2ufJJVZD4Lflx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     </section>
 
-    <section aria-label="Newst Photos">
+    <section id="press" class="background-normal" aria-label="Newst Photos">
       <div class="wrapper">
         <h1 class="section-title">Press Photos</h1>
           
@@ -124,11 +121,10 @@
     
       </div>
     </section>
-
+    <div id="contact" class=" wrapper cover-up"></div>
     <section class="wavy">
       <div class="wrapper">
       <h1 class="section-title">Contact</h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores soluta dolore, inventore quos repellendus repellat natus saepe, dicta eveniet cumque excepturi velit voluptatum qui quaerat in tempore eius iure molestiae?</p>
         
       <form class="contact-form"  action="https://formsubmit.co/ryan.s.maguire@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New Email From ryanmaguire.ca!">
@@ -137,10 +133,20 @@
         <input class="contact-form__field" type="text" name="message" placeholder="Message">
         <button class="contact-form__button" type="submit">Send</button>
       </form>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/yourchannel" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
     
+
       </div>
     </section>
-    
+    <div class=" wrapper cover-up cover-up__bottom">    </div>
 
     <section>
       <div class="player">
@@ -165,10 +171,11 @@
       </div>
     </div>
   </section>
-
-   
-</footer>
-
+  <div>
+    <footer class="wrapper footer-text">      
+      <p> Ryan Maguire Saunders © 2024</p>
+    </footer>
+  </div>
   
   <script defer src="./javascripts/script.js"></script>
 </body>

@@ -6,9 +6,10 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
+    background-color: hsla(319, 36%, 13%, 0.5) !important;
+    color: var(--foreground);
     z-index: 2;
+    
   }
 
   .navbar__title {
@@ -48,7 +49,7 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px; ////////////?CHANGE THIS
+    width: 30px; 
     height: 21px;
   }
 
