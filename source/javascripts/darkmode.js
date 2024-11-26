@@ -1,4 +1,6 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector("#navbar__dark-mode-toggle");
 
@@ -13,7 +15,7 @@ const disableDarkMode = () => {
   localStorage.removeItem('darkMode')
 }
 
-if (darkMode === 'enabled') {
+if (darkMode === 'enabled' || darkMode === null) {
   enableDarkMode();
 }
 
@@ -33,3 +35,4 @@ darkModeToggle.addEventListener('click', () => {
   console.log('Current darkMode value:', localStorage.getItem('darkMode'));
 })
 
+});
