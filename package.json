@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass source/stylesheets/scss/index.scss:build/stylesheets/css/styles.css",
     "sass:watch": "sass --watch source/stylesheets/scss:build/stylesheets/css",
-    "start": "npm run build && serve -s build",
-    "build": "sass source/stylesheets/scss:build/stylesheets/css"
+    "build": "gulp build",
+    "start": "npm run build && serve -s build"
 
 
   },
@@ -37,3 +37,4 @@
     "serve": "^14.2.4"
   }
 }
+
