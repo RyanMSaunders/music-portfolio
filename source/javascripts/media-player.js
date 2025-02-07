@@ -5,8 +5,8 @@ let playpause_btn = document.querySelector('.player__playpause-track');
 let seek_slider = document.querySelector('.player__seek_slider');
 let curr_time = document.querySelector('.player__current-time');
 let total_duration = document.querySelector('.player__total-duration');
-// let curr_track = document.createElement('audio');
-let curr_track = document.getElementById("curr-track");
+let curr_track = document.createElement('audio');
+// let curr_track = document.getElementById("curr-track");
 
 let track_index = 0;
 let isPlaying = false;
