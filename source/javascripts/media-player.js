@@ -17,7 +17,7 @@ const music_list = [
     {
         name : 'Space Baby',
         artist : 'Ryan Maguire',
-        music : 'https://ryanmsaunders.github.io/music-portfolio/music/Space-Baby.mp3'
+        music : './music/Space-Baby.mp3'
     }
 ];
 
