@@ -43,7 +43,8 @@ function jsTask() {
   return src('source/**/*.js', { sourcemaps: true })
     .pipe(babel({ presets: ['@babel/preset-env'] })) // compiles ES6 to version older browser can support
     .pipe(concat('script.js')) // Combine into script.js
-    .pipe(terser()) // minify js
+    .pipe(terser({ compress: { reduce_vars: false } })) // Prevents path changes
+    // .pipe(terser()) // minify js
     .pipe(dest('build/javascripts', { sourcemaps: '.' })); // destination of compiled folder
 }
 
