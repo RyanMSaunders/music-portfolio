@@ -20,6 +20,8 @@ const music_list = [
         music : 'https://ryanmsaunders.github.io/music-portfolio/music/Space-Baby.mp3'
     }
 ];
+console.log("Initial music_list:", music_list);
+
 
 
 
